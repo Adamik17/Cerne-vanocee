@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Linefont&family=Macondo&display=swap');
+
+body {
+    font-family: "Macondo", sans-serif;
+    background-color: black;
+
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(134, 163, 177, 0.8);
+    min-height: 100vh;
+    padding-left: 16px;
+    padding-right: 16px;
+    z-index: 1;
+    margin-bottom: 600px;
+}
+
+#iframe-gjvj {
+    width: 100%;
+    height: 400px;
+}
+
+#fire-video {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+}
+
+p a {
+    color: aqua;
+    text-decoration: none;
+    transition: color 0.5s, background-color 0.5s;
+    border-radius: 5px;
+}
+
+p a:hover {
+    color: blue;
+    background-color: chartreuse;
+}
+h1 a {
+    text-decoration: none;
+    
+    display: inline-block;
+    position: relative;
+}
+
+h1 a::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 5px;
+    left: 50%;
+    position: absolute;
+    background: #ffffff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+h1 a:hover:after {
+    width: 100%;
+    left: 0;
+}
+.fade-in {
+    animation: fade-in 1s ease 0s 1 normal forwards;
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(500px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.rotate {
+    animation: rotate 1s linear 3s infinite normal forwards;
+}
+
+.movement {
+    animation: movement 5s linear 0s infinite normal forwards;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@keyframes movement {
+    0% {
+        transform: translate(0vw,0vh);
+    }
+    50% {
+        transform: translate(100vw,50vh);
+    }
+    75% {
+        transform: translate(0vw, 100vh);
+    }
+    100% {
+        transform: translate(0vw,0vh);
+    }
+}
